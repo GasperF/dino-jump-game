@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Play', sans-serif;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.world{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.score{
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 1vmin;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    padding: 2vmin;
+    border-radius: 50%;
+}
+
+.start-screen{
+    position: absolute;
+    font-size: 4vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide{
+    display: none;
+}
+
+.top{
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+}
+
+.bottom{
+    position: absolute;
+    background: #000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+}
+
+.ground{
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+}
+
+.dino{
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus{
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+}
